@@ -1,0 +1,87 @@
+[
+  {
+    "Id" : "OpenWifi",
+    "Retention Limit": 1095,
+    "Defective": false,
+    "Disposable": false,
+    "Off-Limits": false,
+    "Copy": false,
+    "Node": 1,
+    "Disuse Threshold" : 20,
+    "Aging Decay Factor" : 0.93,
+    "Last Usage" : "2022-02-21T00:00:00+01:00[Europe/Rome]",
+    "Admissed Reductions": {
+        "Aggregation": {
+          "1" : 0.0333
+        },
+        "Dimension Removing": [1,4]
+    }
+  },
+  {
+    "Id" : "Covid19",
+    "Retention Limit": 2190,
+    "Defective": false,
+    "Disposable": false,
+    "Off-Limits": false,
+    "Copy": false,
+    "Node": 1,
+    "Disuse Threshold" : 30,
+    "Aging Decay Factor" : 0.93,
+    "Last Usage" : "2022-02-10T00:00:00+01:00[Europe/Rome]",
+    "Admissed Reductions": {
+        "Multimedia Compression": 0.8
+    }
+  },
+  {
+    "Id" : "ShakeFive2 ",
+    "Retention Limit": 1825,
+    "Defective": false,
+    "Disposable": false,
+    "Off-Limits": false,
+    "Copy": false,
+    "Node": 2,
+    "Disuse Threshold" : 15,
+    "Aging Decay Factor" : 0.93,
+    "Last Usage" : "2022-02-17T00:00:00+01:00[Europe/Rome]",
+    "Admissed Reductions": {
+        "Multimedia Compression": 0.375
+    }
+  },
+  {
+    "Id" : "CasualDataset",
+    "Retention Limit": 1095,
+    "Defective": false,
+    "Disposable": false,
+    "Off-Limits": false,
+    "Copy": false,
+    "Node": 2,
+    "Disuse Threshold" : 30,
+    "Aging Decay Factor" : 0.93,
+    "Last Usage" : "2022-02-10T00:00:00+01:00[Europe/Rome]",
+    "Admissed Reductions": {
+      "Aggregation": {
+        "1" : 0.5,
+        "2" : 0.1667,
+        "3" : 0.04167
+      }
+    }
+  },
+  {
+    "Id" : "PDFArticles",
+    "Retention Limit": 3650,
+    "Defective": false,
+    "Disposable": false,
+    "Off-Limits": false,
+    "Copy": false,
+    "Node": 3,
+    "Disuse Threshold" : 40,
+    "Aging Decay Factor" : 0.93,
+    "Last Usage" : "2022-02-01T00:00:00+01:00[Europe/Rome]",
+    "Admissed Reductions": {
+      "Lossless Compression": {
+        "rar" : [2.39],
+        "7zip" : [4.54]
+      }
+    }
+  }
+]

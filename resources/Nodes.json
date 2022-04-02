@@ -1,0 +1,23 @@
+[
+    {
+        "Id": 1,
+        "Last Clean": "2022-01-01T12:00:00+01:00[Europe/Rome]",
+        "Cleaning Frequency": 20,
+        "Total Capacity" : 2.5,
+        "Filled Capacity" : 2
+    },
+    {
+        "Id": 2,
+        "Last Clean": "2022-01-01T12:00:00+01:00[Europe/Rome]",
+        "Cleaning Frequency": 20,
+        "Total Capacity" : 1,
+        "Filled Capacity" : 0.3
+    },
+    {
+        "Id": 3,
+        "Last Clean": "2022-01-01T12:00:00+01:00[Europe/Rome]",
+        "Cleaning Frequency": 60,
+        "Total Capacity" : 3,
+        "Filled Capacity" : 1.9
+    }
+]
