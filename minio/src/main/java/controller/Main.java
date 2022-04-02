@@ -23,6 +23,8 @@ public class Main {
 		
 		Network network = new Network();
 		
+		
+		
 		JsonImporter jSonImporter = new JsonImporter();
 		
 		network.setNodes(jSonImporter.parseNetwork(NODES_JSON_PATH));
