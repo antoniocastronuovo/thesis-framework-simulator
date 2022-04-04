@@ -35,6 +35,14 @@ public class Metadata {
 	private Double agingDecayFactor;
 
 
+	public Metadata() {
+		super();
+		this.substitutable = new ArrayList<>();
+		this.admissedReductions = new LinkedHashMap <Reduction,Value>();
+		this.reductionList = new LinkedHashMap<>();
+	}
+
+	
 	public Value simulateReduction(Reduction reduction, Integer day) {
 
 		Double oldCompleteness = this.getValue().getCompleteness();
@@ -54,8 +62,6 @@ public class Metadata {
 	}
 
 
-
-
 	public Double getAgingDecayFactor() {
 		return agingDecayFactor;
 	}
@@ -65,34 +71,13 @@ public class Metadata {
 		this.agingDecayFactor = agingDecayFactor;
 	}
 
-
 	public Integer getDisuseThreshold() {
 		return disuseThreshold;
 	}
 
-
 	public void setDisuseThreshold(Integer disuseThreshold) {
 		this.disuseThreshold = disuseThreshold;
 	}
-
-
-	public Metadata() {
-		super();
-		this.substitutable = new ArrayList<>();
-		this.admissedReductions = new LinkedHashMap <Reduction,Value>();
-		this.reductionList = new LinkedHashMap<>();
-	}
-
-
-	public Metadata(ZonedDateTime insertionDate, Boolean isCopy, Node node, Value value) {
-		this.insertionDate = insertionDate;
-		this.retentionLimit = 365;
-		this.copy = isCopy;
-		this.node = node;
-		this.node.getDatasets().add(this);
-		this.value = value;
-	}
-
 
 	public  String getId() {
 		return id;

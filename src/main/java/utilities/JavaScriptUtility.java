@@ -16,14 +16,16 @@ import reductionstrategies.Reduction;
 
 public class JavaScriptUtility {
 
+	/**
+	 * Auto-generated stub constructor
+	 */
 	public JavaScriptUtility() {
 		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-		/**
-	 * @param g
-	 * @param k
+	}	
+
+	/**
+	 * @param node is the considered node to construct the report
+	 * @param today is the reference day to which the report is constructed
 	 * @throws IOException
 	 */
 	public void createReport(Node node, ZonedDateTime today) throws IOException{

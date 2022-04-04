@@ -8,7 +8,7 @@
             expressionsCollapsed: true,
             settingsMenu : false,
             keypad : false,
-            expressions :true,
+            expressions :false,
             showLabel: true
          };
 
