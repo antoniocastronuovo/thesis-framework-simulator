@@ -1,5 +1,9 @@
 package reductionstrategies;
 
+/**
+ * @author Antonio Castronuovo
+ *
+ */
 public abstract class Reduction {
 	private Boolean isReversible;
 	private Double completenessReduction;

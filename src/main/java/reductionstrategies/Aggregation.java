@@ -1,6 +1,10 @@
 package reductionstrategies;
 
 
+/**
+ * @author Antonio Casstronuovo
+ *
+ */
 public class Aggregation extends Reduction {
 
 	public Aggregation(Double aggregationFactor) {

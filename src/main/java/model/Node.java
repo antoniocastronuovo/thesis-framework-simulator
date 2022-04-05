@@ -6,6 +6,10 @@ import java.util.List;
 import java.time.ZonedDateTime;
 
 
+/**
+ * @author Antonio Castronuovo
+ *
+ */
 public class Node {
 	private String id;
 	private List <Metadata> datasets;
@@ -15,13 +19,6 @@ public class Node {
 	private Integer totalCapacity;
 	private Integer filledCapacity;
 	
-	
-	public Node(Boolean thinProvisionable, Integer cleaningFrequency) {
-		super();
-		this.datasets = new ArrayList<>();
-		this.thinProvisionable = thinProvisionable;
-		this.cleaningFrequency = cleaningFrequency;
-	}
 	
 	public Node(String id) {
 		super();

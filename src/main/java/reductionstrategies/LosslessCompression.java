@@ -1,5 +1,9 @@
 package reductionstrategies;
 
+/**
+ * @author Antonio Castronuovo
+ *
+ */
 public class LosslessCompression extends Reduction{
 
 	public LosslessCompression(double newAccessTime) {

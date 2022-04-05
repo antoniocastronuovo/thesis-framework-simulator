@@ -1,5 +1,9 @@
 package reductionstrategies;
 
+/**
+ * @author Antonio Castronuovo
+ *
+ */
 public class Deletion extends Reduction{
 
 	public Deletion() {

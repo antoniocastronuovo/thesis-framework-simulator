@@ -3,6 +3,10 @@ package reductionstrategies;
 import model.Metadata;
 
 
+/**
+ * @author Antonio Castronuovo
+ *
+ */
 public class Deduplication extends Reduction{
  
 	

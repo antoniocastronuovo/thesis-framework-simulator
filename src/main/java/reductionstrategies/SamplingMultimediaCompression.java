@@ -1,5 +1,9 @@
 package reductionstrategies;
 
+/**
+ * @author Antonio Castronuovo
+ *
+ */
 public class SamplingMultimediaCompression extends Reduction{
 
 	public SamplingMultimediaCompression(double reductionRatio) {

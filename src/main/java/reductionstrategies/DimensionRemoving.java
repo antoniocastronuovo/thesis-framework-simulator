@@ -1,5 +1,9 @@
 package reductionstrategies;
 
+/**
+ * @author Antonio Castronuovo
+ *
+ */
 public class DimensionRemoving extends Reduction {
 	
 	public DimensionRemoving(Integer removedDimensions, Integer totDimensions) {

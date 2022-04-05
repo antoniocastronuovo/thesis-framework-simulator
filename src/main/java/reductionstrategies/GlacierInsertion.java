@@ -1,5 +1,9 @@
 package reductionstrategies;
 
+/**
+ * @author Antonio Castronuovo
+ *
+ */
 public class GlacierInsertion extends Reduction{
 
 	public GlacierInsertion(Double newAccessTime) {

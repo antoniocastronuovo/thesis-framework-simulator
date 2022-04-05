@@ -35,6 +35,9 @@ public class Metadata {
 	private Double agingDecayFactor;
 
 
+	/**
+	 * Standard constructor
+	 */
 	public Metadata() {
 		super();
 		this.substitutable = new ArrayList<>();
@@ -43,20 +46,25 @@ public class Metadata {
 	}
 
 	
+	/**
+	 * @param reduction is the reduction to be simulated
+	 * @param day is the day instant to which simulate the reduction
+	 * @return the value corresponding to the reduction application
+	 */
 	public Value simulateReduction(Reduction reduction, Integer day) {
 
+		//Save temporarily the actual value dimensions quantities
 		Double oldCompleteness = this.getValue().getCompleteness();
 		Double oldDiffusion = this.getValue().getDiffusion();
 		Double oldLatency = this.getValue().getLatency();
 		Double oldInterest = this.getValue().getInterest();
 		
 		Value simulatedValue = new Value();
+		//Multiply the old value quantities with the factors of the new reduction
 		simulatedValue.setCompleteness(oldCompleteness * reduction.getCompletenessReduction());
 		simulatedValue.setDiffusion( oldDiffusion * reduction.getDiffusionReduction());
 		simulatedValue.setLatency( oldLatency * reduction.getLatencyReduction());
 		simulatedValue.setInterest(oldInterest * Value.valueInterestAt(this.value.getTotalValue(),disuseThreshold,agingDecayFactor,day));
-		
-		this.reductionList.put(ZonedDateTime.now(),reduction);
 		
 		return simulatedValue;
 	}
