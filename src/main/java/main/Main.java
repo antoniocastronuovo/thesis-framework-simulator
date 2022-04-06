@@ -2,6 +2,7 @@ package main;
 
 
 import java.io.IOException;
+import java.time.Duration;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 
@@ -34,9 +35,33 @@ public class Main {
 		//Set-up day of the simulation
 		ZonedDateTime today = ZonedDateTime.of(2022, 03, 20, 0, 0, 1, 0, ZoneId.systemDefault());
 		
-		//for each node of the network create a report
+		//Set data waste
+		setDataWaste(network, today);
+		
+		//for each node of the network create a report for the discovered waste
 		for (Node node : network.getNodes()) {
 			javaScriptUtility.createReport(node, today);
+		}
+	}
+	
+	
+	/**
+	 * @param network is the system architecture
+	 * @param today is the day of waste discovery
+	 */
+	static void setDataWaste(Network network, ZonedDateTime today) {
+		//for each node of the network
+		for (Node node : network.getNodes()) {
+			//for each data set of the considered node
+			node.getDatasets().forEach((d) -> {
+				//Control if it is disused
+				if((int)Duration.between(d.getLastUsage(),today).toDays()> d.getDisuseThreshold()) {
+					d.setDisused(true);
+				//Control if it is aged
+				}if((int)Duration.between(d.getInsertionDate(),today).toDays()> d.getRetentionLimit()) {
+					d.setAged(true);
+				}
+			});
 		}
 	}
 }

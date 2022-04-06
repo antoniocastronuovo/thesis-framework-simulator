@@ -33,6 +33,8 @@ public class Metadata {
 	private LinkedHashMap <Reduction,Value> admissedReductions;
 	private Integer disuseThreshold;
 	private Double agingDecayFactor;
+	private Boolean disused;
+	private Boolean aged;
 
 
 	/**
@@ -41,6 +43,8 @@ public class Metadata {
 	public Metadata() {
 		super();
 		this.substitutable = new ArrayList<>();
+		this.disused =false;
+		this.aged = false;
 		this.admissedReductions = new LinkedHashMap <Reduction,Value>();
 		this.reductionList = new LinkedHashMap<>();
 	}
@@ -234,6 +238,26 @@ public class Metadata {
 
 	public void setAdmissedReductions(LinkedHashMap <Reduction,Value> admissedReductions) {
 		this.admissedReductions = admissedReductions;
+	}
+
+
+	public Boolean getDisused() {
+		return disused;
+	}
+
+
+	public void setDisused(Boolean disused) {
+		this.disused = disused;
+	}
+
+
+	public Boolean getAged() {
+		return aged;
+	}
+
+
+	public void setAged(Boolean aged) {
+		this.aged = aged;
 	}
 
 

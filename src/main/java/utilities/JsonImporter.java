@@ -76,6 +76,7 @@ public class JsonImporter {
 			dataset.setDisuseThreshold(e.getAsJsonObject().get("Disuse Threshold").getAsInt());
 			dataset.setAgingDecayFactor(e.getAsJsonObject().get("Aging Decay Factor").getAsDouble());
 			dataset.setLastUsage(ZonedDateTime.parse(e.getAsJsonObject().get("Last Usage").getAsString()));
+			dataset.setInsertionDate(ZonedDateTime.parse(e.getAsJsonObject().get("Insertion Date").getAsString()));
 			network.getNodeById(dataset.getNode().getId()).addDataset(dataset);
 			dataset.setId(e.getAsJsonObject().get("Id").getAsString());
 			

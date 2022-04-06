@@ -10,6 +10,7 @@
     "Disuse Threshold" : 20,
     "Aging Decay Factor" : 0.93,
     "Last Usage" : "2022-02-21T00:00:00+01:00[Europe/Rome]",
+    "Insertion Date" : "2021-01-01T00:00:00+01:00[Europe/Rome]",
     "Admissed Reductions": {
         "Aggregation": {
           "1" : 0.0333
@@ -28,8 +29,28 @@
     "Disuse Threshold" : 30,
     "Aging Decay Factor" : 0.93,
     "Last Usage" : "2022-02-10T00:00:00+01:00[Europe/Rome]",
+    "Insertion Date" : "2021-06-01T00:00:00+01:00[Europe/Rome]",
     "Admissed Reductions": {
         "Multimedia Compression": 0.8
+    }
+  },
+  {
+    "Id" : "PDFArticles",
+    "Retention Limit": 183,
+    "Defective": false,
+    "Disposable": false,
+    "Off-Limits": false,
+    "Copy": true,
+    "Node": 1,
+    "Disuse Threshold" : 30,
+    "Aging Decay Factor" : 0.93,
+    "Last Usage" : "2022-03-18T00:00:00+01:00[Europe/Rome]",
+    "Insertion Date" : "2021-08-20T00:00:00+01:00[Europe/Rome]",
+    "Admissed Reductions": {
+      "Lossless Compression": {
+        "rar" : [2.39],
+        "7zip" : [4.54]
+      }
     }
   },
   {
@@ -43,6 +64,7 @@
     "Disuse Threshold" : 15,
     "Aging Decay Factor" : 0.93,
     "Last Usage" : "2022-02-17T00:00:00+01:00[Europe/Rome]",
+    "Insertion Date" : "2015-01-01T00:00:00+01:00[Europe/Rome]",
     "Admissed Reductions": {
         "Multimedia Compression": 0.375
     }
@@ -58,12 +80,29 @@
     "Disuse Threshold" : 30,
     "Aging Decay Factor" : 0.93,
     "Last Usage" : "2022-02-10T00:00:00+01:00[Europe/Rome]",
+    "Insertion Date" : "2015-01-01T00:00:00+01:00[Europe/Rome]",
     "Admissed Reductions": {
       "Aggregation": {
         "1" : 0.5,
         "2" : 0.1667,
         "3" : 0.04167
       }
+    }
+  },
+  {
+    "Id" : "Covid19",
+    "Retention Limit": 365,
+    "Defective": false,
+    "Disposable": false,
+    "Off-Limits": false,
+    "Copy": true,
+    "Node": 2,
+    "Disuse Threshold" : 15,
+    "Aging Decay Factor" : 0.93,
+    "Last Usage" : "2022-03-14T00:00:00+01:00[Europe/Rome]",
+    "Insertion Date" : "2022-01-01T00:00:00+01:00[Europe/Rome]",
+    "Admissed Reductions": {
+        "Multimedia Compression": 0.8
     }
   },
   {
@@ -77,11 +116,51 @@
     "Disuse Threshold" : 40,
     "Aging Decay Factor" : 0.93,
     "Last Usage" : "2022-02-01T00:00:00+01:00[Europe/Rome]",
+    "Insertion Date" : "2015-01-01T00:00:00+01:00[Europe/Rome]",
     "Admissed Reductions": {
       "Lossless Compression": {
         "rar" : [2.39],
         "7zip" : [4.54]
       }
+    }
+  },
+  {
+    "Id" : "CasualDataset",
+    "Retention Limit": 1095,
+    "Defective": false,
+    "Disposable": false,
+    "Off-Limits": false,
+    "Copy": true,
+    "Node": 3,
+    "Disuse Threshold" : 20,
+    "Aging Decay Factor" : 0.93,
+    "Last Usage" : "2022-03-10T00:00:00+01:00[Europe/Rome]",
+    "Insertion Date" : "2018-06-01T00:00:00+01:00[Europe/Rome]",
+    "Admissed Reductions": {
+      "Aggregation": {
+        "1" : 0.5,
+        "2" : 0.1667,
+        "3" : 0.04167
+      }
+    }
+  },
+  {
+    "Id" : "OpenWifi",
+    "Retention Limit": 183,
+    "Defective": false,
+    "Disposable": false,
+    "Off-Limits": true,
+    "Copy": true,
+    "Node": 3,
+    "Disuse Threshold" : 15,
+    "Aging Decay Factor" : 0.93,
+    "Last Usage" : "2022-03-19T00:00:00+01:00[Europe/Rome]",
+    "Insertion Date" : "2021-02-20T00:00:00+01:00[Europe/Rome]",
+    "Admissed Reductions": {
+        "Aggregation": {
+          "1" : 0.0333
+        },
+        "Dimension Removing": [1,4]
     }
   }
 ]

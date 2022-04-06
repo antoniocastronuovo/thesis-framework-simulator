@@ -51,22 +51,25 @@ public class JavaScriptUtility {
         
         // for each data set in the considered node 
         for (Metadata dataset : node.getDatasets()) {
-        	//Calculate time duration from last usage to today 
-        	Integer day = (int) Duration.between(dataset.getLastUsage(),today).toDays();
-        	//insert a <p> element containing the name of the data set 
-        	bw.write("        <p > Proposed reductions for dataset <b>"+dataset.getId()+"</b></p>\r\n");
-        	//Create a <div> to insert standard data set value trend filling it with fundamental quantities to construct the graph (k,g, δ interest coefficient) 
-        	bw.write("        <div id=dataset" +dataset.getId()+ " g=" + dataset.getAgingDecayFactor().toString() +" k=" + dataset.getDisuseThreshold().toString() +" interestCoeff = "+new Value().getInterest() +" style='width: 80%; height: 400px;'> \r\n");
-        	Integer i = 0;
-        	//for each data set's admissed reduction create a new internal <div> describing the resulting trend
-	        for (Reduction reduction : dataset.getAdmissedReductions().keySet()) {
-	        	
-	        	bw.write("        	<div id='calculator"+i+"' " +
-	        						" red="+reduction.getName().replace(" ", "")+" v="+ dataset.getAdmissedReductions().get(reduction).getTotalValue().toString() +" d="+day+" interestCoeff = "+new Value().getInterest() +" ></div>\r\n");	        	
-	        	i++;
-			}
-	        bw.write("        </div>\r\n");
-	        bw.write("        <p></p>\r\n");
+        	//if it is disused or aged and it is not off-limits
+        	if (( dataset.getDisused() || dataset.getAged()) && !dataset.getOffLimits() && !dataset.getCopy()) {
+	        	//Calculate time duration from last usage to today 
+	        	Integer day = (int) Duration.between(dataset.getLastUsage(),today).toDays();
+	        	//insert a <p> element containing the name of the data set 
+	        	bw.write("        <p > Proposed reductions for dataset <b>"+dataset.getId()+"</b></p>\r\n");
+	        	//Create a <div> to insert standard data set value trend filling it with fundamental quantities to construct the graph (k,g, δ interest coefficient) 
+	        	bw.write("        <div id=dataset" +dataset.getId()+ " g=" + dataset.getAgingDecayFactor().toString() +" k=" + dataset.getDisuseThreshold().toString() +" interestCoeff = "+new Value().getInterest() +" style='width: 80%; height: 400px;'> \r\n");
+	        	Integer i = 0;
+	        	//for each data set's admissed reduction create a new internal <div> describing the resulting trend
+		        for (Reduction reduction : dataset.getAdmissedReductions().keySet()) {
+		        	
+		        	bw.write("        	<div id='calculator"+i+"' " +
+		        						" red="+reduction.getName().replace(" ", "")+" v="+ dataset.getAdmissedReductions().get(reduction).getTotalValue().toString() +" d="+day+" interestCoeff = "+new Value().getInterest() +" ></div>\r\n");	        	
+		        	i++;
+				}
+		        bw.write("        </div>\r\n");
+		        bw.write("        <p></p>\r\n");
+        	}
         }	
         bw.write("    </body>\r\n"
         		+ "</html>");
